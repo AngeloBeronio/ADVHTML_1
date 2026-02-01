@@ -15,6 +15,10 @@
   flex-wrap: nowrap;
 }
 
+.close-btn {
+  display: none
+}
+
 .menu-toggle {
   display: none;
   font-size: 3vh;
@@ -44,18 +48,18 @@
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1vw;               
+  gap: 2vw;      
 }
 
 .nav-links a {
   text-decoration: none;
   color: #555;
   font-weight: 550;
-  font-size: 1.4rem;
-  padding: 1vh 0.5vw;    
+  font-size: 1.5rem;
+  padding: 2vh 0.5vw;    
   
   height: 6vh;
-  line-height: 6vh;
+  line-height: 9vh;
   padding: 1vw;
 }
 
@@ -66,17 +70,19 @@
   color: #fff;
   background: #1e90ff;
   padding: 8vh 4vw;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
 .enroll-btn {
   text-decoration: none;
   border: 0.15rem solid green;
+  background-color: white;
   color: green;
-  padding: 2vh 1.5vw;       
+  padding: 3vh 1.5vw;       
   font-weight: bold;
   font-size: 1.5rem;
+  margin-left: 5vw;
 }
 
 .menu-toggle {
@@ -88,6 +94,7 @@
 
 /* Mobile */
 @media (max-width: 1230px) {
+
   .nav {
     width: 100%;
     justify-content: space-between;
@@ -95,28 +102,46 @@
   }
 
   .enroll-btn {
-    display: none;
+    margin-top: 5vh;
+    font-size: 100%;
   }
 
   .menu-toggle {
     display: block;
-
+    font-size: 5vh;
+    cursor: pointer;
   }
 
   .nav-links {
-    position: absolute;
-    top: 100%; /* below topbar */
-    right: 0;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 40%;
     background: #fff;
     flex-direction: column;
-    display: none; /* hidden initially */
-    border: 0.1rem solid #ddd;
-    z-index: 10;
+    padding: 2vh 1vw;
+    gap: 1vh;
+    border-left: 0.1rem solid #ddd;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+    .nav-links .close-btn {
+    text-align: right; 
+    padding: 1vh 2vw;
+    font-size: 2rem;  
+    cursor: pointer;
+    border-bottom: 0.1rem solid #ddd;
+  }
+
+  .nav-links .close-btn span:hover {
+    color: red;
   }
 
   .nav-links.show {
-    display: flex; /* show links when menu is toggled */
+    right: 0;
   }
 
   .nav-links li {
@@ -125,9 +150,20 @@
 
   .nav-links a {
     display: block;
-    padding: 1.5vh 2vw;
+    padding: 1.5vh 2vw 7vh;
     font-size: 1.2rem;
     color: #555;
     border-bottom: 0.1rem solid #ddd;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .nav-links a.active {
+    top: 0;
+    padding: .5vh 2vw 8vh;
+    font-size: 1rem;
+  }
+  .close-btn {
+    display: block;
+    margin-top: 2vh;
   }
 }

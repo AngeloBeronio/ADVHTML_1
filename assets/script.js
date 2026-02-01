@@ -1,8 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.getElementById("menuToggle");
+  const toggle = document.getElementById("menuToggle");
   const navLinks = document.querySelector(".nav-links");
+  const closeBtn = document.getElementById("closeSidebar");
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
+  toggle.addEventListener("click", () => {
+    navLinks.classList.add("show");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    navLinks.classList.remove("show");
   });
 });
