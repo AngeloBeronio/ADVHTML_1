@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh 1vw;
+  background: #fff;
+  border-bottom: 0.1rem solid #ddd;
+  flex-wrap: nowrap;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 3vh;
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1vw; 
+}
+
+.logo img {
+  height: 9vh;
+  max-height: 150px
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 6vw;
+  justify-content: flex-end;
+  flex-grow: 1;
+  padding-right: 4vw;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1vw;               
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 550;
+  font-size: 1.4rem;
+  padding: 1vh 0.5vw;    
+  
+  height: 6vh;
+  line-height: 6vh;
+  padding: 1vw;
+}
+
+.nav-links a.active {
+  position: relative;
+  top: 2.5vh;
+
+  color: #fff;
+  background: #1e90ff;
+  padding: 8vh 4vw;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.enroll-btn {
+  text-decoration: none;
+  border: 0.15rem solid green;
+  color: green;
+  padding: 2vh 1.5vw;       
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 3vh;
+  cursor: pointer;
+  padding-right: 4vw;
+}
+
+/* Mobile */
+@media (max-width: 1230px) {
+  .nav {
+    width: 100%;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .enroll-btn {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%; /* below topbar */
+    right: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    display: none; /* hidden initially */
+    border: 0.1rem solid #ddd;
+    z-index: 10;
+  }
+
+  .nav-links.show {
+    display: flex; /* show links when menu is toggled */
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 1.5vh 2vw;
+    font-size: 1.2rem;
+    color: #555;
+    border-bottom: 0.1rem solid #ddd;
+  }
+}
