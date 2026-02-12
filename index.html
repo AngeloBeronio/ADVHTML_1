@@ -1,32 +1,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <script src="https://kit.fontawesome.com/9492ad33b9.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
 <header class="topbar">
   <div class="logo">
-    <img src="assets/images/logo.png" alt="Integrated Montessori Center">
+    <img src="assets/images/logo.png" alt="IMC Logo">
   </div>
-
   <nav class="nav">
-  <ul class="nav-links">
-  <li class="close-btn"><span id="closeSidebar">×</span></li>
-  <li><a href="#" class="active">Home</a></li>
-  <li><a href="#">About Us</a></li>
-  <li><a href="#">Store</a></li>
-  <li><a href="#">Library</a></li>
-  <li><button class="enroll-btn">Enroll Now</button></li>
-</ul>
+    <ul class="nav-links">
+      <li class="close-btn"><span id="closeSidebar">×</span></li>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#" onclick="window.location.href='/templates/about.html'">About Us</a></li>
+      <li><a href="#">Store</a></li>
+      <li><a href="#">Library</a></li>
+        <button class="enroll-btn" id="openModal">Apply Now</button>
+      </li>
+    </ul>
   </nav>
 
   <div class="menu-toggle" id="menuToggle">☰</div>
 </header>
 
 <div class="headcontent">
-  <div class="head-text">
+  <div class="head-items">
     <h1>
       “In everything you do, put GOD first and He will direct and crown your efforts with success”
     </h1>
@@ -43,6 +43,65 @@
   </div>
 </div>
 
+<div class="subcontent-header">
+  <h1>Programs</h1>
+</div>
 
+<div class="subcontent">
+  <div class="subcontent-item">
+    <img src="assets/images/pshomephoto.jpg" alt="Pre-school">
+    <h2 class="itemheader">Pre-school</h2>
+  </div>
+
+  <div class="subcontent-item">
+    <img src="assets/images/gshomephoto.jpg" alt="Grade School">
+    <h2 class="itemheader">Grade School</h2>
+  </div>
+
+  <div class="subcontent-item">
+    <img src="assets/images/hsphoto1.jpg" alt="Highschool">
+    <h2 class="itemheader">Highschool</h2>
+  </div>
+</div>
+
+<div class="modal" id="modal">
+  <div class="inner-modal">
+    <div class="inner-modal-content">
+      <div class="inner-left-modal">
+        <h1>Welcome to Integrated Montessori Center</h1>
+        <h2>ADMISSION POLICIES</h2>
+        <ol>
+          <li>IMC has the right to refuse enrollment even from its old students if the student does not satisfy the minimum academic standard and other related requirements.</li>
+          <li>Only students with no academic deficiency or behavioral problems shall be accepted for enrollment.</li>
+          <li>Late enrollment may be allowed only when slots are still available. Enrollment for preferred class schedule is on a FIRST COME, FIRST SERVED BASIS.</li>
+        </ol>
+        <p>If you have any questions, click <b>Inquire</b></p>
+        <p>To proceed to Enrollment, click <b>Enroll</b></p>
+      </div>
+
+      <div class="inner-right-modal">
+        <h1><i class="fa-solid fa-book-open"></i> Updates</h1>
+        <ul>
+          <li>Enrollment requirements released!</li>
+          <li>Enrollment is now open!</li>
+          <li>Scholarship Applications now open!</li>
+        </ul>
+      </div>
+    </div>
+
+<div class="inner-modal-buttons">
+      <div class="left-modal-buttons">
+        <button class="inquireBtn">Inquire</button>
+        <button class="enrollBtn" onclick="window.location.href='templates/enrollment.html'">Enroll</button>
+      </div>
+      <button class="modalClose" id="closeModalBtn">Exit</button>
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Integrated Montessori • Center © 2026 • Privacy Policy</p>
+</div>
 <script src="assets/script.js"></script>
 </body>

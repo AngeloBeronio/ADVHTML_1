@@ -1,0 +1,102 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/9492ad33b9.js" crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">
+      <img src="/assets/images/logo.png" alt="IMC Logo">
+    </div>
+    <nav class="nav">
+      <h2>
+        IMC Online Enrollment for New Students
+      </h2>
+    </nav>
+  </header>
+  <div class="enrollment-form-card">
+    <h1>
+      Enrollee's Information
+    </h1>
+    <form id="enrollmentForm">
+      <div class="form-group">
+        <label for="lastname">
+          Last Name
+        </label>
+        <input type="text" id="lastname" name="lastname" placeholder="e.g. Dela Cruz"
+        required>
+      </div>
+      <div class="form-group">
+        <label for="middlename">
+          Middle Name
+        </label>
+        <input type="text" id="middlename" name="middlename" placeholder="e.g. Santos">
+      </div>
+      <div class="form-group">
+        <label for="firstname">
+          First Name
+        </label>
+        <input type="text" id="firstname" name="firstname" placeholder="e.g. Juan"
+        required>
+      </div>
+      <div class="form-group">
+        <label for="birthdate">
+          Birthdate
+        </label>
+        <input type="date" id="birthdate" name="birthdate" required>
+      </div>
+      <div class="form-group">
+        <label for="sex">
+          Sex
+        </label>
+        <select id="sex" name="sex" required>
+          <option value="" disabled selected>
+            Select
+          </option>
+          <option value="Male">
+            Male
+          </option>
+          <option value="Female">
+            Female
+          </option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="level">
+          Applying School Level
+        </label>
+        <select id="level" name="level" required>
+          <option value="" disabled selected>
+            Select
+          </option>
+          <option value="Preschool">
+            Preschool
+          </option>
+          <option value="Grade School">
+            Grade School
+          </option>
+          <option value="High School">
+            High School
+          </option>
+        </select>
+      </div>
+      <div class="form-group" id="programGroup">
+        <label for="programLevel">
+          Program / Year Level
+        </label>
+        <select id="programLevel" name="programLevel" disabled required>
+          <option value="" selected>
+            Select school level first
+          </option>
+        </select>
+      </div>
+    </form>
+    <button type="submit" class="submitBtn" onclick="window.location.href='/templates/enrollment2.html'">
+      Proceed
+    </button>
+  </div>
+  <script src="/assets/enrollmentscript.js">
+  </script>
+</body>
